@@ -178,8 +178,8 @@ def find_repeats(words, max_n=4):
             if a == b and all(a):
                 if n == 1 and a[0] in {"that", "had", "very", "really"}:
                     pass  # real English repeats still get listed below, flagged as weak
-                found.append({"n": n, "text": " ".join(a), "at_s": round(words[i].start, 2),
-                              "gap_s": round(words[i + n].start - words[i + n - 1].end, 2)})
+                found.append({"n": n, "text": " ".join(a), "at_s": round(words[i]["start"], 2),
+                              "gap_s": round(words[i + n]["start"] - words[i + n - 1]["end"], 2)})
     # drop shorter repeats contained in a longer one at the same spot
     found.sort(key=lambda r: (r["at_s"], -r["n"]))
     out = []
