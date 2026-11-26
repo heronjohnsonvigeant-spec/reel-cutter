@@ -1,0 +1,8 @@
+# Reel week cutter. Install into .venv-reels (see README.md).
+# ffmpeg and ffprobe must be on PATH; they are not Python packages.
+faster-whisper>=1.1.0
+# faster-whisper 1.2 calls av.open(..., metadata_errors="ignore").
+# PyAV 19 dropped that argument and the transcribe step crashes.
+av>=17,<19
+Pillow>=10.4.0
+numpy>=1.26

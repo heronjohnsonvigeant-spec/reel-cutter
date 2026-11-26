@@ -1,0 +1,9 @@
+output/
+*.mp4
+*.mov
+*.m4v
+*.mkv
+*.webm
+*.wav
+__pycache__/
+.venv*/
